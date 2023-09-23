@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace basic_net
+{
+    class Program
+    {   
+        static void Main(string[] args)
+        {
+            //BMI
+            Console.Write("Enter ur weight (kg) : ");
+            string weight = Console.ReadLine();
+            Console.Write("Enter ur height (cm) : ");
+            string height = Console.ReadLine();
+
+            //Parse string to number
+            float w, h;
+            bool successW = float.TryParse(weight,out w);
+            bool successH = float.TryParse(height,out h);
+
+            if (successW != false && successH != false)
+            {
+                h /= 100;
+                float bmi = (((float)(w / Math.Pow(h, 2)))) ;
+                Console.WriteLine(bmi);
+            }
+            else
+            {
+                Console.WriteLine("Data is not correct !");
+            }
+            Console.ReadLine();
+        }
+    }
+}

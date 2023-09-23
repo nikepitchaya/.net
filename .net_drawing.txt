@@ -1,0 +1,70 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace basic_net
+{
+    class Program
+    {   
+        static void Main(string[] args)
+        {
+            /*
+            int money,pan=0,haroi=0,roi=0;
+            Console.Write("Enter us credet that u want drawing : ");
+            bool success = int.TryParse(Console.ReadLine(), out money);
+            if (success)
+            {
+                if(money >= 1000)
+                {
+                    pan = money / 1000;
+                    money %= 1000;
+                }
+                if(money >= 500 && money < 1000)
+                {
+                    haroi = money / 500;
+                    money %= 500;
+                }
+                if(money >= 100 && money < 500)
+                {
+                    roi = money / 100;
+                    money %= 100;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Error");
+            }
+            Console.WriteLine("1000 Bath : {0}",pan);
+            Console.WriteLine("500 Bath : {0}", haroi);
+            Console.WriteLine("100 Bath : {0}", roi);
+            */
+
+            int money;
+            int pan = 0, haroi = 0, roi = 0;
+            do
+                {
+                Console.Write("Enter us credet that u want drawing : ");
+                bool success = int.TryParse(Console.ReadLine(), out money);
+                if (success) {
+                        pan = money / 1000;
+                        money %= 1000;
+                        haroi = money / 500;
+                        money %= 500;
+                        roi = money / 100;
+                        money %= 100;
+                }
+                else
+                {
+                    Console.WriteLine("Value is not correct ! ");
+                    continue;
+                }
+                } while (money%100 != 0);
+            Console.WriteLine("1000 Bath : {0}", pan);
+            Console.WriteLine("500 Bath : {0}", haroi);
+            Console.WriteLine("100 Bath : {0}", roi);
+            Console.ReadLine();
+        }
+    }
+}

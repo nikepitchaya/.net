@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace basic_net
+{
+    class Program
+    {   
+        static void Main(string[] args)
+        {
+            //TryParse (Handle Error When Can't Parse)
+
+            //Input (String only)
+            string text = "222.444444444";
+
+            //Process
+
+            int myInt;
+            long myLong;
+            float myFloat;
+            double myDouble;
+            bool successInt = int.TryParse(text,out myInt);
+            bool successLong = long.TryParse(text,out myLong);
+            bool successFloat = float.TryParse(text,out myFloat);
+            bool successDouble = double.TryParse(text,out myDouble);
+
+            //Result
+            Console.WriteLine(" Type is {0} and value is : {1} and check is : {2}", myInt.GetType(), myInt, successInt);
+            Console.WriteLine(" Type is {0} and value is : {1} and check is : {2}", myLong.GetType(), myLong, successLong);
+            Console.WriteLine(" Type is {0} and value is : {1} and check is : {2}", myFloat.GetType(), myFloat, successFloat);
+            Console.WriteLine(" Type is {0} and value is : {1} and check is : {2}", myDouble.GetType(), myDouble, successDouble);
+            Console.ReadKey();
+        }
+    }
+}

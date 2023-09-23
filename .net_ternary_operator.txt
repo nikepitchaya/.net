@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace basic_net
+{
+    class Program
+    {   
+        static void Main(string[] args)
+        {
+            //Ternary Operator
+
+            int score = 50;
+            if(score >= 50)
+            {
+                Console.WriteLine("PASS");
+            }
+            else
+            {
+                Console.WriteLine("NOT PASS");
+            }
+
+            string grade = (score >= 50 ? "PASS" : "NOTPASS");
+            Console.WriteLine(grade);
+
+            Console.ReadLine();
+        }
+    }
+}

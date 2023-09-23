@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace basic_net
+{
+    class Program
+    {   
+        static void Main(string[] args)
+        {
+            int count = 1;
+            int number;
+            Console.Write("Enter ur value : ");
+            int.TryParse(Console.ReadLine(),out number);
+            while (count <= 12)
+            {
+                Console.WriteLine("{0} x {1} = {2}",number,count,number*count);
+                count++;
+            }
+            Console.ReadLine();
+        }
+    }
+}

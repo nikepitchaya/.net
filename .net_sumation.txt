@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace basic_net
+{
+    class Program
+    {   
+        static void Main(string[] args)
+        {
+            /*  int sum=0;
+              float avg=0;
+              for(int i = 1; i <= 5; i++)
+              {
+                  int num;
+                  int.TryParse(Console.ReadLine(),out num);
+                  sum += num;
+              }
+              avg = (sum / 5);
+              Console.WriteLine("Summation is : {0} , Avg is : {1}", sum,avg);
+              Console.ReadLine(); */
+
+            /*  int num, count = 0, sum = 0;
+              float avg = 0;
+              do
+              {
+                  count++;
+                  Console.Write("Input Value : ");
+                  int.TryParse(Console.ReadLine(), out num);
+                  if (num < 0) break;
+                  sum += num;
+                  avg = (sum / count);
+                  Console.WriteLine("Sum is {0} , Avg is {1}", sum, avg);
+              } while (true);
+              Console.WriteLine("End");
+              Console.ReadLine(); */
+
+            int max =0 , min = int.MaxValue;
+            int num;
+            do
+            {
+                Console.Write("Input Value : ");
+                int.TryParse(Console.ReadLine(), out num);
+                if (num < 0) break;
+                if(num > max)
+                {
+                    max = num;
+                }
+                if(num < min)
+                {
+                    min = num;
+                }
+            } while (true);
+            Console.WriteLine("Max is {0}", max);
+            Console.WriteLine("Min is {0}", min);
+            Console.WriteLine("End");
+            Console.ReadLine();
+        }
+    }
+}

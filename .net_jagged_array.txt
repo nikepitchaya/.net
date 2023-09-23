@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace basic_net
+{
+    class Program
+    {   
+        static void Main(string[] args)
+        {
+            // Jagged Array
+            // Non-init
+            string[][] names = new string[4][];
+            // Feed Value and Manage
+            names[0] = new string[3] { "nike","aon","ize" };
+            names[1] = new string[] { "pet", "dog" };
+            names[2] = new string[] { "man" };
+            names[3] = new string[] { "mee", "wong" };
+
+            // Init
+            string[][] list =
+            {
+                new string[]{"aon","nike","kill" },
+                new string[]{"k","a" },
+                new string[]{"b","c" },
+                new string[]{"5" },
+            };
+
+            //Edit Value
+            list[0][1] = "newnike";
+
+            //For Loop
+            for(int i = 0; i < list.GetLength(0); i++)
+            {
+                for(int j = 0; j < list[i].Length ; j++)
+                {
+                    Console.WriteLine("Array [{0}][{1}] : {2}",i,j,list[i][j]);
+                }
+                Console.WriteLine("------------");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}

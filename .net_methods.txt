@@ -1,0 +1,144 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace basic_net
+{
+    class Program
+    {   
+        static void Main(string[] args)
+        {
+            string[] name = { "nike", "ize", "jam", "tang" };
+            watchArray(name);
+            int sum = plusNumber(1, 2);
+            Console.WriteLine(sum);
+            string check = checkNumber(5);
+            Console.WriteLine(check);
+            caCulate(4, 2);
+
+            //Hard Code is da best !
+            int[] number = { 1,2,3,4,5,6,7,8,9 };
+            Console.WriteLine(displayScore(number));
+
+            //Find max with array
+            Console.WriteLine("Max valus is "+findMax(number));
+            //Find min with array
+            Console.WriteLine("Max valus is " + findMin(number));
+
+            //Copy array
+            int[] copyarr = copyArray(number);
+            watchArray2(copyarr);
+
+            //Default Parameter
+            showData("Nike");
+            showData();
+            Console.ReadLine();
+
+           
+        }
+
+        // Receive int and Return int
+        static int plusNumber(int a , int b)
+        {
+            int number = a + b;
+            return number;
+        }
+
+        // Receive int and Return String
+        static string checkNumber(int a)
+        {
+            string result = "";
+            if (a % 2 == 0) result = "even";
+            else result = "odd";
+            return result;
+        }
+
+        // Receive 
+        static void watchArray(string[] name)
+        {
+            foreach(string n in name)
+            {
+                Console.WriteLine(n);
+            }
+        }
+        static void watchArray2(int[] num)
+        {
+            foreach (int n in num)
+            {
+                Console.Write(n);
+            }
+        }
+
+        // Return void
+        static void caCulate(int a, int b)
+        {
+            if(a<0 || b < 0)
+            {
+                return;
+            }
+            else
+            {
+                Console.WriteLine(a + b);
+            }
+        }
+
+        // Receive Array and Return String  
+        static string displayScore(int[] score)
+        {
+            string result = "My Array is : {";
+            for(int i = 0; i < score.Length; i++)
+            {
+                result += score[i]+(i < score.Length - 1 ? "," : "");
+                result += (i < score.Length - 1 ? "" : "}");
+            }
+            return result;
+        }
+
+        // Receive Array and Return int
+        static int findMax(int[] score)
+        {
+            int max = score[0];
+            for (int i = 0; i < score.Length; i++)
+            {
+                if (score[i] >= max)
+                {
+                    max = score[i];
+                }
+            }
+            return max;
+        }
+
+        static int findMin(int[] score)
+        {
+            int min = score[0];
+            for (int i = 0; i < score.Length; i++)
+            {
+                if (score[i] <= min)
+                {
+                    min = score[i];
+                }
+            }
+            return min;
+        }
+
+        // Receive Array and Return Array
+        static int[] copyArray(int[] score)
+        {
+            int[] arr = new int[score.Length];
+            for (int i = 0; i < score.Length; i++)
+            {
+                arr[i] = score[i];
+            }
+            return arr;
+        }
+
+        // Default Parameters
+        static void showData(string name = "Dog")
+        {
+            Console.WriteLine(name);
+        }
+    }
+
+}

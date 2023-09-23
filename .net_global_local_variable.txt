@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace basic_net
+{
+    class Program
+    {
+        //Global and Local
+
+        static string global = "NIKE"; // Global
+        static void Main(string[] args)
+        {
+            string local = "nike"; // Local
+            Console.WriteLine(local);
+            Name();
+            Console.ReadLine();
+
+        }
+        static void Name()
+        {
+            Console.WriteLine(global);
+        }
+
+    }
+}

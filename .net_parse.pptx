@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace basic_net
+{
+    class Program
+    {   
+        static void Main(string[] args)
+        {
+            //Parse (สำหรับแปลง String เป็นเลขเท่านั้น)
+
+            //Input (String only)
+            string text = "222";
+
+            //Process
+
+            //จำนวนเต็ม
+            byte myByte = byte.Parse(text);
+            short myShort = short.Parse(text);
+            int myInt = int.Parse(text);
+            long myLong = long.Parse(text);
+            //จำนวนทศนิยม
+            float myFloat = float.Parse(text);
+            double myDouble = double.Parse(text);
+
+            bool tool = true;
+            string myString = Convert.ToString(tool);
+            Console.WriteLine(myString);
+
+            //Result
+            Console.WriteLine(" Type is {0} and value is : {1}", myByte.GetType(), myByte) ;
+            Console.WriteLine(" Type is {0} and value is : {1}", myShort.GetType(), myShort);
+            Console.WriteLine(" Type is {0} and value is : {1}", myInt.GetType(), myInt);
+            Console.WriteLine(" Type is {0} and value is : {1}", myLong.GetType(), myLong);
+            Console.WriteLine(" Type is {0} and value is : {1}", myFloat.GetType(), myFloat);
+            Console.WriteLine(" Type is {0} and value is : {1}", myDouble.GetType(), myDouble);
+            Console.ReadKey();
+        }
+    }
+}

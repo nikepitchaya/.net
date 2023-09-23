@@ -1,0 +1,66 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace basic_net
+{
+    struct Employee {
+        public string name;
+        public int age;
+        public double salary;
+        public string department;
+
+        public void setEmployee(string n,int a,double s = 1000, string d= "Programmer")
+        {
+            name = n;
+            age = a;
+            salary = s;
+            department = d;
+        }
+        public void showEmployee()
+        {
+            Console.WriteLine("Name is : " + name);
+            Console.WriteLine("Age is : " + age);
+            Console.WriteLine("Salary is : " + salary);
+            Console.WriteLine("Department is : " + department);
+        }
+        
+    }
+    class Program
+    {
+        //Structure
+        static void Main(string[] args)
+        {
+            // Manage Value without public void
+            Employee one;
+            one.name = "Nike";
+            one.age = 23;
+            one.salary = 23000;
+            one.department = "Programmer";
+            Console.WriteLine("Name is : " + one.name);
+            Console.WriteLine("Age is : " + one.age);
+            Console.WriteLine("Salary is : " + one.salary);
+            Console.WriteLine("Department is : " + one.department);
+
+            // Manage Value with public void ในกรณีที่มีการนิยาม public void หรือ methods ใน struct ต้องประกาศตัวแปรให้เป็นรูปแบบของ Object
+            Employee two = new Employee();
+            two.setEmployee("Aon", 23, 50000);
+            two.showEmployee();
+
+            // Appent to array
+            Employee[] all = {one,two};
+            Console.WriteLine(all[0].name);
+
+            Console.ReadLine();
+        }
+
+        static Employee ManageEmployee(Employee employee)
+        {
+            return employee;
+        }
+ 
+
+    }
+}

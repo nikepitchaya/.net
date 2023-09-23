@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace basic_net
+{
+    class Program
+    {   
+        static void Main(string[] args)
+        {
+            //Convert
+
+            //Input
+            double text = 221.234444444444444;
+
+            //Process
+
+            //จำนวนเต็ม
+            byte myByte = Convert.ToByte(text);
+            short myShort = Convert.ToInt16(text);
+            int myInt = Convert.ToInt32(text);
+            long myLong = Convert.ToInt64(text);
+            //จำนวนทศนิยม
+            float myFloat = Convert.ToSingle(text);
+            double myDouble = Convert.ToDouble(text);
+
+            //Result
+            Console.WriteLine(" Type is {0} and value is : {1}", myByte.GetType(), myByte) ;
+            Console.WriteLine(" Type is {0} and value is : {1}", myShort.GetType(), myShort);
+            Console.WriteLine(" Type is {0} and value is : {1}", myInt.GetType(), myInt);
+            Console.WriteLine(" Type is {0} and value is : {1}", myLong.GetType(), myLong);
+            Console.WriteLine(" Type is {0} and value is : {1}", myFloat.GetType(), myFloat);
+            Console.WriteLine(" Type is {0} and value is : {1}", myDouble.GetType(), myDouble);
+            Console.ReadKey();
+        }
+    }
+}

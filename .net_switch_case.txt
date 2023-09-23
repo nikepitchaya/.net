@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace basic_net
+{
+    class Program
+    {   
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Please select ur chioce 1 or 2 ?");
+            switch (Convert.ToInt32(Console.ReadLine()))
+            {
+                case 1:
+                    {
+                        int a, b;
+                        Console.WriteLine("Hello Plus");
+                        Console.Write("Enter ur value 1 : ");
+                        int.TryParse(Console.ReadLine(),out a);
+                        Console.Write("Enter ur value 2 : ");
+                        int.TryParse(Console.ReadLine(),out b);
+                        Console.WriteLine("Value is {0}", a + b);
+                    }
+                    break;
+                case 2:
+                    {
+                        int a, b;
+                        Console.WriteLine("Hello Minus");
+                        Console.Write("Enter ur value 1 : ");
+                        int.TryParse(Console.ReadLine(), out a);
+                        Console.Write("Enter ur value 2 : ");
+                        int.TryParse(Console.ReadLine(), out b);
+                        Console.WriteLine("Value is {0}", a - b);
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Data is not correct!");
+                    break;
+            }
+            Console.ReadLine();
+        }
+    }
+}

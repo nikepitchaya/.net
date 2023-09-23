@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace basic_net
+{
+    class Program
+    {   
+        static void Main(string[] args)
+        {
+            //Narrowing Casting 
+
+            //กรณีที่ต้องการเก็บค่าจากชนิดตัวแปรที่มีค่ามากกว่าไปใส่ไว้ที่ชนิดตัวแปรที่มีค่าน้อยกว่า
+            long x = 255555;
+            int y = (int)x;
+
+            //กรณีที่มีการเก็บค่าจากชนิดตัวแปรที่มากกว่าไปใส่ไว้ชนิดตัวแปรที่น้อยกว่าจะดำเนินการอัตโนมัติโดยไม่ต้องใช้ ฟอแมตท์ ของ Narrowing
+            int a = 20000;
+            long b = a;
+
+            Console.WriteLine("Type is {0} and value is {1} ",y.GetType(),y);
+            Console.WriteLine("Type is {0} and value is {1} ",b.GetType(), b);
+            Console.ReadKey();
+        }
+    }
+}

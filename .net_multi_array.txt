@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace basic_net
+{
+    class Program
+    {   
+        static void Main(string[] args)
+        {
+            //Multi Array
+
+            //Non-init
+            int[,] numbers = new int[3,4];
+            //Feed Value
+            numbers[0, 0] = 50;
+            //Init
+            int[,] nums = { { 1, 2 }, { 3, 4 }, { 5, 6 } };
+            //Edit Value
+            nums[2, 1] = 54;
+            //Get Length (0 คือแถว , 1 คือคอลัม)
+            Console.WriteLine("Array Row : {0} , Columns : {1} , Amount of Array : {2}", nums.GetLength(0), nums.GetLength(1),nums.Length);
+
+            // For Loop
+            for(int i = 0; i < nums.GetLength(0); i++)
+            {
+                for(int j = 0; j < nums.GetLength(1); j++)
+                {
+                    Console.WriteLine("Array[{0},{1}] : {2}",i,j,nums[i, j]);
+                }
+                Console.WriteLine("------------");
+            }
+
+            // For Each
+            foreach (int num in nums)
+            {
+                Console.WriteLine(num);
+            }
+
+            Console.ReadLine();
+        }
+    }
+}

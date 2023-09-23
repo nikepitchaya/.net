@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace basic_net
+{
+    
+    class Program
+    {
+        //Enum
+        enum Rating
+        {
+            verybad=0,
+            bad,//1
+            good,//2
+            great,//3
+            excellent//4
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Score Rating = " + (int)Rating.verybad);
+            Console.ReadLine();
+        }
+    }
+}
